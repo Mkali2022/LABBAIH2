@@ -1,0 +1,70 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+ 
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+<style>
+#map {
+  width: 900px;
+  height: 400px;
+}
+</style>
+<body>
+
+<div id='map'></div>
+</body>
+<script>
+  
+var locations = [
+  //["Location and Driver Details ", 31.97864, 35.9241],
+  //["Location and Driver Details", 31.98614, 35.94118],
+  //["Location and Driver Details", 31.96927, 35.92706],
+  //["Location and Driver Details", 31.98731, 35.90333]
+  ["Location and Driver Details", 32.243, 36.53359],
+  ["Location and Driver Details", 32.2491, 36.51128]
+ 
+];
+ 
+
+var map = L.map('map').setView([32.243, 36.53359],13 );
+mapLink =
+  '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+L.tileLayer(
+  'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; ' + mapLink + ' Contributors',
+    maxZoom: 50,
+    
+  }).addTo(map);
+//  map.on(L.Draw.Event.CREATED, function (e) {
+//    var layer = e.layer;
+//    drawnItems.addLayer(layer);
+//    console.log(layer.getLatLngs())
+//});
+  var marker="";
+ 
+
+  marker = new L.marker([locations[0][1], locations[0][2]])
+    .bindPopup(locations[0][0])
+         
+  
+  
+
+map.fitBounds(polyline.getbounds());
+         var latlng = Array();
+         latlng.push(locations[0][1]);
+         latlng.push(locations[0][2]);
+         var polyline=L.polyline(latlng[1],{color:"red"});
+         map.fitBounds(polyline.getBounds());
+         .addTo(map);
+}
+
+
+//map.on('click', function(e) {
+//    alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng)
+//});
+
+</script>
+
+ 

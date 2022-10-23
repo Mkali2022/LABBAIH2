@@ -9,7 +9,7 @@ namespace MA_Delivery_Project.Create
     {
         // get connection
         public static string AddContractDetails(Contract cont , string con, string qry )
-        {
+        {//
             string conStr = con;
             SqlConnection Sql = new SqlConnection(conStr);
             Sql.Open();
@@ -23,7 +23,7 @@ namespace MA_Delivery_Project.Create
 
         }
         public static string  UpdateContactdetails(Contract cont, string con, string qry)
-        {
+        {//
             string conStr = con;
             SqlConnection Sql = new SqlConnection(conStr);
             Sql.Open();

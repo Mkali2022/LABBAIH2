@@ -5,7 +5,7 @@ using System.Xml.Linq;
 namespace MA_Delivery_Project.Models
 {
     public class Contract
-    {
+    {//
         [Key]
         [Display(Name = "ID")]
 

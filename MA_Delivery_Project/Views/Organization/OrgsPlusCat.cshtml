@@ -1,0 +1,76 @@
+﻿@model MA_Delivery_Project.DBConnStr.AllMod
+@{
+	ViewBag.Title = "Organizaion And Categories";
+}
+@{
+	<div class="form-row">
+			<div class="form-group col-md-1">
+
+				<label> Code</label>
+				<input type="text" class="form-control" id="txtOrgCode" placeholder=" Code">
+			</div>
+			<div class="form-group col-md-3">
+
+				<label>Oganization Name</label>
+				<input type="text" class="form-control" id="txtOrgsName" placeholder=" Name">
+			</div>
+	</div>
+	<div class="form-row">
+			<div class="form-group col-md-3">
+				<input type="button" value="Save" class="btn btn-success" id="btnsaveOrganize">
+
+			</div>
+	</div>
+	<!---->
+	<div class="form-row">
+			<div class="form-group col-md-3">
+				<label> Oganization</label>
+
+				<input type="button" value="ee" style="display:none" onclick="pp();">
+
+				<!-- BEGIN Select -->
+				<select class="form-control" id="select2-1" onchange="FT();">
+				
+					@foreach (var modelstat in Model.OrgsList)
+					{
+					<option value="@modelstat.ID">@modelstat.OrganizeName</option>
+					}
+				
+				 
+				 	
+				</select>
+
+
+
+			</div>
+
+	</div>
+	<div class="form-row">
+			<div class="form-group col-md-1">
+
+				<label> Code</label>
+				<input type="text" class="form-control" id="txtcatcode" placeholder=" Code">
+			</div>
+			<div class="form-group col-md-3">
+
+				<label>Category Name</label>
+				<input type="text" class="form-control" id="txtcattitle" placeholder=" Name">
+			</div>
+	</div>
+	<div class="form-row">
+			<div class="form-group col-md-3">
+				<input type="button" value="Save Category" class="btn btn-success" id="btnsaveCat">
+
+			</div>
+	</div>
+<script>
+function FT(){
+var t= document.getElementById("select2-1");
+
+alert(t.options[t.selectedIndex].value);
+	}
+	</script>
+}
+
+	
+

@@ -10,8 +10,9 @@
 
 
 					<!-- BEGIN Select -->
-					<select class="form-control" id="select2-1" onchange="FT();">
-						@foreach(var modelitems in Model.OrgsList){
+            <select class="form-control select2-1" id="SelIDv" onchange="FT();">
+						@foreach(var modelitems in Model.OrgsList)
+						{
 					<option value="@modelitems.ID">@modelitems.OrganizeName</option>
 						}
 					 	
@@ -43,7 +44,7 @@
 	</div>
 	<div class="form-row">
 				<div class="form-group col-md-3">
-					<input type="button" value="Save" class="btn btn-success">
+					<input type="button" value="Save" class="btn btn-success" id="BtnsaveRelated">
 				</div>
 	</div>
 

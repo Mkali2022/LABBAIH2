@@ -25,40 +25,10 @@
 
 					<label>Contract</label>
 					<select class="form-control select2-1" onchange="FT();">
-						@foreach(var g in Model.ContList){
-					<option value="@g.ID">@g.OwnerName +"-"+@g.OrganizationAddress </option>
-			 }
-					</select>
-				</div>
-				<div class="form-group col-md-2">
-
-					<label>Amount</label>
-					<input type="text" class="form-control" id="txtamount" placeholder=" Amount">
-				</div>
-	</div>
-		<div class="form-row">
-				<div class="form-group col-md-1">
-
-					<label> Code</label>
-					<input type="text" class="form-control" id="txtcode" placeholder=" Code">
-				</div>
-				<div class="form-group col-md-3">
-
-					<label>Paymnet Type</label>
-					<select class="form-control select2-1" onchange="FT();">
-					@foreach(var itemmodel in Model.PaymList)
-					{
-					<option value="@itemmodel.ID" >@itemmodel.PaymentWay</option>
-                }
-					</select>
-				</div>
-				<div class="form-group col-md-3">
-
-					<label>Contract</label>
-					<select class="form-control select2-1" onchange="FT();">
-						@foreach(var g in Model.ContList){
-					<option value="@g.ID">@g.OwnerName +"-"+@g.OrganizationAddress </option>
-			 }
+						@foreach(var g in Model.ContList)
+						{
+					<option value="@g.ID">@g.OwnerName - @g.OrganizationAddress </option>
+			            }
 					</select>
 				</div>
 				<div class="form-group col-md-2">

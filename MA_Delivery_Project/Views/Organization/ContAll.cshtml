@@ -7,7 +7,7 @@
 		<div class="form-group col-md-3">
 
 					<label> Select Organization</label>
-					<select class="form-control" id="select2-1" onchange="FT();">
+					<select class="form-control select2-1" id="SelIDv"  >
 			 	 
 					@foreach(var Modelitem in Model.OrgsSubList)
 				    {
@@ -28,7 +28,7 @@
 					<label> Name</label>
 					<input type="text" class="form-control" id="txtOwnerName" placeholder=" Name">
 				</div>
-				<div class="form-group col-md-3">
+				<div class="form-group col-md-3" >
 
 					<label> Address</label>
 					<input type="text" class="form-control" id="txtAddress" placeholder=" Address">
@@ -47,13 +47,13 @@
 					<!-- BEGIN Input Group -->
 					<label> Date Range</label>
 					<div class="input-group input-daterange">
-						<input type="text" class="form-control" placeholder="From" da>
+						<input type="text" class="form-control" id="txtdf" placeholder="From" da>
 						<div class="input-group-prepend input-group-append">
 							<span class="input-group-text">
 								<i class="fa fa-ellipsis-h"></i>
 							</span>
 						</div>
-						<input type="text" class="form-control" placeholder="To">
+						<input type="text" class="form-control" id="txtdt" placeholder="To">
 					</div>
 
 				</div>
@@ -64,5 +64,9 @@
 				</div>
 
 	</div>
+		<div class="form-row">
+				<div class="form-group col-md-3">
+				<input type="button" value="Save"  id="Btnsaveconts" >
+				</div></div>
 
 }

@@ -12,7 +12,7 @@
 			<div class="form-group col-md-3">
 
 				<label>Oganization Name</label>
-				<input type="text" class="form-control" id="txtOrgsName" placeholder=" Name">
+				<input type="text" class="form-control" id="txtOrgName" placeholder=" Name">
 			</div>
 	</div>
 	<div class="form-row">
@@ -26,10 +26,10 @@
 			<div class="form-group col-md-3">
 				<label> Oganization</label>
 
-				<input type="button" value="ee" style="display:none" onclick="pp();">
+				 
 
 				<!-- BEGIN Select -->
-				<select class="form-control" id="select2-1" onchange="FT();">
+				<select class="form-control select2-1" id="selID" onchange="FT();">
 				
 					@foreach (var modelstat in Model.OrgsList)
 					{
@@ -65,9 +65,9 @@
 	</div>
 <script>
 function FT(){
-var t= document.getElementById("select2-1");
+ //var t= document.getElementById("select2-1");
 
-alert(t.options[t.selectedIndex].value);
+//alert(t.options[t.selectedIndex].value);
 	}
 	</script>
 }

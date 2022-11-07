@@ -1,0 +1,47 @@
+﻿@model MA_Delivery_Project.DBConnStr.AllMod
+ 
+@{
+	<div class="form-row">
+					<div class="form-group col-md-1">
+
+						<label> Code</label>
+						<input type="text" class="form-control" id="txtcode" placeholder=" Code">
+					</div>
+							<div class="form-group col-md-3">
+
+						<label> Branch Name</label>
+						<select class="form-control select2-1" id="SelIDv"  >
+						@foreach(var R  in Model.BranchList)
+						{
+						<option value="@R.ID">@R.BranchCode  @R.BranchName</option>
+						}
+						
+						</select>
+						
+						</div>
+					
+	</div>
+		<div class="form-row">
+					<div class="form-group col-md-3">
+
+						<label> Fees</label>
+						<input type="text" class="form-control" id="txtfees" placeholder="Fees">
+					</div>
+						<div class="form-group col-md-1">
+
+						<label>Status</label> 
+			<input type="checkbox" class="form-control"  id="chkstatus"  >
+
+		
+					</div>
+					</div>
+	<div class="form-row">
+		<div class="form-group col-md-3">
+		 <input type="button" value="Save" id="BtnSaveOrgsBra">
+
+			</div>
+	</div>
+
+
+
+}

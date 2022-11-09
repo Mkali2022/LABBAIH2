@@ -262,7 +262,7 @@ namespace MA_Delivery_Project.Controllers
       
 
 
-            return Vd;
+            return "";
         }
 
         public string DelVal() {
